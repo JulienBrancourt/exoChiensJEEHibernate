@@ -65,6 +65,22 @@ public class DogServlet extends HttpServlet {
     }
 
     protected void showDetail(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String idRecup = req.getParameter("id");
+        int id = Integer.parseInt(idRecup);
+        Dog dog = findDogById(id);
+        req.setAttribute("id", dog.getId());
+        req.setAttribute("name", dog.getName());
+        req.setAttribute("breed", dog.getBreed());
+        req.setAttribute("dateOfBirth", dog.getDateOfBirth().toString());
+
         req.getRequestDispatcher("/pages/detail.jsp").forward(req, resp);
+    }
+
+    private Dog findDogById(int id) {
+        for (Dog d : dogs) {
+            if (d.getId() == id) {
+            }
+        }
+        return d;
     }
 }

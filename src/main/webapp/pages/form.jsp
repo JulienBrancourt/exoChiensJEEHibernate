@@ -5,7 +5,7 @@
   Time: 13:48
   To change this template use File | Settings | File Templates.
 --%>
-<jsp:useBean id="dogs" scope="request" type="java.util.ArrayList<org.example.exochiens.model.Dog>"/>
+<%--<jsp:useBean id="dogs" scope="request" type="java.util.ArrayList<org.example.exochiens.model.Dog>"/>--%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -21,11 +21,11 @@
 <div class="container">
     <h1>Ajouter un chien :</h1>
 
-    <form action="${pageContext.request.contextPath}/dog/*" method="post" class="col-8 offset-2">
+    <form action="${pageContext.request.contextPath}/dog/add" method="post" class="col-8 offset-2">
         <fieldset>
             <div class="form-floating mb-3">
                 <input type="number" class="form-control" id="id" name="id" placeholder="id">
-                <label for="nom">ID</label>
+                <label for="id">ID</label>
             </div>
             <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="nom" name="name" placeholder="Nom">

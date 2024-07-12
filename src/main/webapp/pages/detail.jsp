@@ -5,8 +5,10 @@
   Time: 15:11
   To change this template use File | Settings | File Templates.
 --%>
-<jsp:useBean id="pathInfo" type="java.lang.String" scope="request" />
-<jsp:useBean id="dogs" scope="request" type="java.util.ArrayList<org.example.exochiens.model.Dog>"/>
+<%--<jsp:useBean id="pathInfo" type="java.lang.String" scope="request" />--%>
+<jsp:useBean id="id" scope="request" type="java.util.ArrayList<org.example.exochiens.model.Dog>"/>
+<%--<jsp:useBean id="id" type="java.lang.String" scope="request" />--%>
+
 
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
@@ -22,30 +24,31 @@
 <body>
 <div class="container">
     <h1>Détail du chien :</h1>
+    <p>Afficher les details du chien avec l'id :  <%= id %></p>
 
-    <form action="${pageContext.request.contextPath}/dog/*" method="post" class="col-8 offset-2">
-        <fieldset>
-            <div class="form-floating mb-3">
-                <input type="number" class="form-control" id="id" name="id" placeholder="id" readonly>
-                <label for="nom">ID</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="nom" name="name" placeholder="Nom" readonly>
-                <label for="nom">Nom</label>
-            </div>
-            <div class="form-floating mb-3">
-                <input type="text" class="form-control" id="race" name="breed" placeholder="Race" readonly value="toto">
-                <label for="race">Race</label>
-            </div>
-            <div class="form-floating">
-                <input type="date" class="form-control" id="dateN" name="dateOfBirth" placeholder="Date de naissance"
-                       readonly>
-                <label for="dateN">Date de naissance</label>
-            </div>
-            <br>
-            <button type="submit" class="btn btn-outline-primary">Ajouter</button>
-        </fieldset>
-    </form>
+<%--    <form action="${pageContext.request.contextPath}/dog/*" method="post" class="col-8 offset-2">--%>
+<%--        <fieldset>--%>
+<%--            <div class="form-floating mb-3">--%>
+<%--                <input type="number" class="form-control" id="id" name="id" placeholder="id" readonly>--%>
+<%--                <label for="nom">ID</label>--%>
+<%--            </div>--%>
+<%--            <div class="form-floating mb-3">--%>
+<%--                <input type="text" class="form-control" id="nom" name="name" placeholder="Nom" readonly>--%>
+<%--                <label for="nom">Nom</label>--%>
+<%--            </div>--%>
+<%--            <div class="form-floating mb-3">--%>
+<%--                <input type="text" class="form-control" id="race" name="breed" placeholder="Race" readonly value="toto">--%>
+<%--                <label for="race">Race</label>--%>
+<%--            </div>--%>
+<%--            <div class="form-floating">--%>
+<%--                <input type="date" class="form-control" id="dateN" name="dateOfBirth" placeholder="Date de naissance"--%>
+<%--                       readonly>--%>
+<%--                <label for="dateN">Date de naissance</label>--%>
+<%--            </div>--%>
+<%--            <br>--%>
+<%--            <button type="submit" class="btn btn-outline-primary">Ajouter</button>--%>
+<%--        </fieldset>--%>
+<%--    </form>--%>
 </div>
 
 

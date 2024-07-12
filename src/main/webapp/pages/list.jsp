@@ -46,7 +46,7 @@
         </td>
         <td><%= dogs.get(i).getDateOfBirth().getDayOfMonth() + "/" + dogs.get(i).getDateOfBirth().getMonthValue() + "/" + dogs.get(i).getDateOfBirth().getYear() %>
         </td>
-        <td><a href="${pageContext.request.contextPath}/dog/<%=dogs.get(i).getId() %>" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Détails</a></td>
+        <td><a href="${pageContext.request.contextPath}/dog/detail?id=${dogs.get(i).getId()}" class="btn btn-primary"><i class="bi bi-plus-circle"></i> Détails</a></td>
     </tr>
     <% } %>
     </tbody>
